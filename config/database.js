@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+const DATABASE_URL="mongodb://localhost:27017/blogapp-docker"
 const connectToDB = () => {
-    mongoose.connect(process.env.DATABASE_URL)
+    mongoose.connect(DATABASE_URL)
+    // mongoose.connect(process.env.DATABASE_URL)
         .then(() => {
             console.log("connected to DB");
         })
