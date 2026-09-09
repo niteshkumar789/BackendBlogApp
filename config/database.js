@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const DATABASE_URL="mongodb://localhost:27017/blogapp-docker"
+// mongo_blogapp is a name of docker container name
+const DATABASE_URL="mongodb://mongo_blogapp:27017/blogapp-docker"
 const connectToDB = () => {
     mongoose.connect(DATABASE_URL)
     // mongoose.connect(process.env.DATABASE_URL)
