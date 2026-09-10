@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: backend
+    container_name: backend_blogapp
     ports:
       - '3000:3000'
     depends_on:
@@ -21,7 +21,7 @@ services:
 
   mongodb:
     image: mongo
-    container_name: mongodb
+    container_name: mongo_blogapp
     ports:
       - '27017:27017'
     volumes:
